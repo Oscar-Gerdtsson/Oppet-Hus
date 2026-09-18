@@ -2,27 +2,55 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --cyan:#00ffff;
+    --darkcyan:#002736;
+    --green:#00e676;
+    --darkgreen:#002d22;
+    --yellow:#ffeb3b;
+    --darkyellow:#2a250f;
+    --orange:#ff8800;
+    --darkorange:#3b1404;
+    --magenta:#ff0079;
+    --darkmagenta:#330026;
+    --darkgrey:#111111;
+}
 
 body{
-    
+    font-family: "Onest";
 }
 
 header{
-display: flex;
-justify-content: space-between;
-margin:20px
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    padding:20px 40px;
+    background-color: black;
+    color: white;
+    font-family: "Big Shoulders";
 }
-
-
+header a{
+    align-self: center;
+    height: 40px;
+}
+img{
+    height: 100%;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
 
 .inriktningar{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
 }
 .inriktning{
     min-width: 250px;
     height: 100px;
-    margin: 20px auto;
+    margin: 20px 20px;
     background-color: black;
 }
 

@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "OnestRegular";
+    src: url(Typsnitt/Onest-Regular.ttf);
+}
+@font-face {
+    font-family: "OnestMedium";
+    src: url(Typsnitt/Onest-Medium.ttf);
+}
+@font-face {
+    font-family: "OnestBold";
+    src: url(Typsnitt/Onest-Bold.ttf);
+}
+@font-face {
+    font-family: "BigShouldersTextBlack";
+    src: url(Typsnitt/BigShouldersText-Black.ttf);
+}
+@font-face {
+    font-family: "IBMPlexMonoMedium";
+    src: url(Typsnitt/IBMPlexMono-Medium.ttf);
+}
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -17,9 +41,17 @@
 }
 
 body{
-    font-family: "Onest";
+    font-family: "OnestRegular";
 }
-
+h1, h2{
+    font-family: "BigShouldersTextBlack";
+}
+p{
+    font-family: "OnestRegular";
+    color: var(--darkgrey);
+    font-size: 15px;
+    line-height: 1.5;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -48,10 +80,58 @@ a{
     padding: 20px;
 }
 .inriktning{
-    min-width: 250px;
+    min-width: 300px;
     height: 100px;
     margin: 20px 20px;
     background-color: black;
+}
+
+#spelutveckling{
+    background-color: var(--darkcyan);
+}
+#spelutveckling h2{
+    margin: 20px;
+    color: var(--cyan);
+}
+
+#spelgrafik{
+    background-color: var(--darkorange);
+}
+#spelgrafik h2{
+    margin: 20px;
+    color: var(--orange);
+}
+
+#aiwebbutveckling{
+    background-color: var(--darkgreen);
+}
+#aiwebbutveckling h2{
+    margin: 20px;
+    color: var(--green);
+}
+
+#grafiskdesign{
+    background-color: var(--darkmagenta);
+}
+#grafiskdesign h2{
+    margin: 20px;
+    color: var(--magenta);
+}
+
+#fotofilm{
+    background-color: var(--darkcyan);
+}
+#fotofilm h2{
+    margin: 20px;
+    color: var(--cyan);
+}
+
+#musikproduktion{
+    background-color: var(--darkgreen);
+}
+#musikproduktion h2{
+    margin: 20px;
+    color: var(--green);
 }
 
 .inriktning a{
@@ -60,7 +140,18 @@ a{
     height: 100%;
 }
 
-@media (max-width:400px) {
+footer{
+    background-color: black;
+    height: 100px;
+}
 
-    
+@media (max-width:600px) {
+    .inriktningar{
+        padding: 0;
+    }
+    .inriktning{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
 }

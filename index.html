@@ -14,38 +14,69 @@
         <h1>ÖPPET HUS</h1>
     </header>
     <main>
-        <section class="introjnih">
-            <p>brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext brödtext </p>
-        </section>
-        <section class="inriktningar">
-            <div style="width: 100%;">
-                <h1>VÅRA PROGRAM</h1>
+        <section class="intro">
+            <h1>VÄLKOMMEN</h1>
+            <p class="ingress">ingress eller någonting kanske placeholder text</p>
+            <div class="buttons">                      
+                <div class="button">Inriktningar<a href="#inriktningar"><div>knapparna här borde nog ha en ikon eller en bild</div></a></div>
+                <div class="button">Karta<a href="page/karta.html"><div>jag vet inte alls hur kartan ska se ut eller fungera</div></a></div>
+                <div class="button">Elev för en dag<a href="#elevförendag"><div>labels över knapparna är också wip</div></a></div>
             </div>
-
-            <div id="spelutveckling" class="inriktning"><a href="page/spelutveckling.html">
-                <h2>Spelutveckling</h2>
-
-            </a></div>
-            <div id="spelgrafik" class="inriktning"><a href="page/spelgrafik.html">
-                <h2>Spelgrafik</h2>
-
-            </a></div>
-            <div id="aiwebbutveckling" class="inriktning"><a href="page/aiwebbutveckling.html">
-                <h2>AI & Webbutveckling</h2>
-
-            </a></div>
-            <div id="grafiskdesign" class="inriktning"><a href="page/grafiskdesign.html">
-                <h2>Grafisk Design</h2>
-
-            </a></div>
-            <div id="fotofilm" class="inriktning"><a href="page/fotofilm.html">
-                <h2>Foto & Film</h2>
-
-            </a></div>
-            <div id="musikproduktion" class="inriktning"><a href="page/musikproduktion.html">
-                <h2>Musikproduktion</h2>
-
-            </a></div>
+        </section>
+        <section id="inriktningar">
+            <h1>VÅRA PROGRAM</h1>
+            <div class="inriktningar">
+                <div id="spelutveckling" class="inriktning"><a href="page/spelutveckling.html">
+                    <h2>Spelutveckling</h2>
+        
+                </a></div>
+                <div id="aiwebbutveckling" class="inriktning"><a href="page/aiwebbutveckling.html">
+                    <h2>AI & Webbutveckling</h2>
+        
+                </a></div>
+                <div id="spelgrafik" class="inriktning"><a href="page/spelgrafik.html">
+                    <h2>Spelgrafik</h2>
+        
+                </a></div>
+                <div id="grafiskdesign" class="inriktning"><a href="page/grafiskdesign.html">
+                    <h2>Grafisk Design</h2>
+        
+                </a></div>
+                <div id="fotofilm" class="inriktning"><a href="page/fotofilm.html">
+                    <h2>Foto & Film</h2>
+        
+                </a></div>
+                <div id="musikproduktion" class="inriktning"><a href="page/musikproduktion.html">
+                    <h2>Musikproduktion</h2>
+        
+                </a></div>
+            </div>
+        </section>
+        <section id="elevförendag">
+            <h1>ELEV FÖR EN DAG</h1>
+            <div class="elevförendagtest">
+                <h3>ANMÄL DIG</h3><br>
+                <form action="">
+                    <label for="name">Namn:</label><br>
+                    <input type="text" id="fname"><br><br>
+                    <label for="fmail">Epost:</label><br>
+                    <input type="email" id="fmail"><br><br>
+                    <label for="">Välj Program:</label><br>
+                    <input type="radio" id="fspelutveckling" name="fprogram">
+                    <label for="fspelutveckling">Spelutveckling</label><br>
+                    <input type="radio" id="faiwebbutveckling" name="fprogram">
+                    <label for="faiwebbutveckling">AI & Webbutveckling</label><br>
+                    <input type="radio" id="fspelgrafik" name="fprogram">
+                    <label for="fspelgrafik">Spelgrafik</label><br>
+                    <input type="radio" id="fgrafiskdesign" name="fprogram">
+                    <label for="fgrafiskdesign">Grafisk Design</label><br>
+                    <input type="radio" id="ffotofilm" name="fprogram">
+                    <label for="ffotofilm">Foto & Film</label><br>
+                    <input type="radio" id="fmusikproduktion" name="fprogram">
+                    <label for="fmusikproduktion">Musikproduktion</label><br><br>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
         </section>
     </main>
 

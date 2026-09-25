@@ -19,13 +19,6 @@
     src: url(Typsnitt/IBMPlexMono-Medium.ttf);
 }
 
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
 :root{
     --cyan:#00ffff;
     --darkcyan:#002736;
@@ -40,10 +33,20 @@
     --darkgrey:#111111;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
 body{
     font-family: "OnestRegular";
 }
-h1, h2{
+h1{
+    font-family: "BigShouldersTextBlack";
+    text-align: center;
+}
+h2{
     font-family: "BigShouldersTextBlack";
 }
 p{
@@ -52,62 +55,95 @@ p{
     font-size: 15px;
     line-height: 1.5;
 }
+p.ingress{
+    font-family: "OnestMedium";
+    text-align: center;
+}
+img{height: 100%;}
+a{text-decoration: none;}
+
+/*  Header  */
+
 header{
     display: flex;
     justify-content: space-evenly;
     height: 50px;
-    padding:20px 0;
+    padding:20px;
     background-color: black;
     color: white;
     font-family: "Big Shoulders";
 }
-header a{
-    align-self: center;
-    height: 40px;
-}
 header h1{
     align-self: center;
 }
-img{
-    height: 100%;
-}
-a{
+header a{
+    align-self: center;
+    height: 40px;
     color: white;
-    text-decoration: none;
 }
 
-.intro{
-    height: 500px;
-    width: 100%;
+/*  Sections  */
+section{
+    margin: 50px 0;
 }
-.intro p{
-    color: white;
-}
-.intro h1{
+
+section h1{
+    color: #111111;
+    font-size: 40px;
     text-align: center;
-    padding: 40px;
+    padding: 10px;
 }
-#SUintro{
-    background-color: var(--darkcyan);
-    color: var(--cyan);
+section p.ingress{
+    padding-bottom: 15px;
 }
-#SGintro{
-    background-color: var(--darkorange);
-    color: var(--orange);
+
+/*  Intro Section  */
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
 }
+.button{
+    text-align: center;
+    width: 30%;
+}
+.button div{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-color: #111111;
+}
+
+/*  Inriktningar Section  */
 
 .inriktningar{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px;
+    flex-wrap:wrap;
+    justify-content: space-around;
 }
 .inriktning{
-    min-width: 300px;
-    height: 100px;
-    margin: 20px 20px;
+    margin:20px auto;
+    height: 160px;
+    width: 300px;
+    max-width: calc(100vw - 40px);
     background-color: black;
 }
+.inriktning a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/*  Elev för en dag Section  */
+
+.elevförendagtest{
+    margin: 50px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+}
+
+/*  Kod för specifika inriktningar  */
 
 #spelutveckling{
     background-color: var(--darkcyan);
@@ -116,52 +152,57 @@ a{
     margin: 20px;
     color: var(--cyan);
 }
-
-#spelgrafik{
-    background-color: var(--darkorange);
-}
-#spelgrafik h2{
-    margin: 20px;
-    color: var(--orange);
-}
-
-#aiwebbutveckling{
-    background-color: var(--darkgreen);
-}
-#aiwebbutveckling h2{
-    margin: 20px;
-    color: var(--green);
-}
-
-#grafiskdesign{
-    background-color: var(--darkmagenta);
-}
-#grafiskdesign h2{
-    margin: 20px;
-    color: var(--magenta);
-}
-
-#fotofilm{
+#SUintro{
     background-color: var(--darkcyan);
-}
-#fotofilm h2{
-    margin: 20px;
     color: var(--cyan);
 }
 
-#musikproduktion{
+#aiwebbutveckling{
+    background-color: var(--cyan);
+}
+#aiwebbutveckling h2{
+    margin: 20px;
+    color:  var(--darkcyan);
+}
+
+
+#spelgrafik{
+    background-color: var(--darkmagenta);
+}
+#spelgrafik h2{
+    margin: 20px;
+    color: var(--magenta);
+}
+#SGintro{
+    background-color: var(--darkmagenta);
+    color: var(--magenta);
+}
+
+#grafiskdesign{
+    background-color: var(--magenta);
+}
+#grafiskdesign h2{
+    margin: 20px;
+    color: var(--darkmagenta);
+}
+
+#fotofilm{
     background-color: var(--darkgreen);
 }
-#musikproduktion h2{
+#fotofilm h2{
     margin: 20px;
     color: var(--green);
 }
 
-.inriktning a{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
+#musikproduktion{
+    background-color: var(--green);
 }
+#musikproduktion h2{
+    margin: 20px;
+    color: var(--darkgreen);
+}
+
+
 
 footer{
     background-color: black;
@@ -169,13 +210,5 @@ footer{
 }
 
 @media (max-width:600px) {
-    .inriktningar{
-        padding: 0;
-    }
-    .inriktning{
-        width: 100%;
-        height: 200px;
-        margin: 0;
-        margin-bottom: 10px;
-    }
+
 }

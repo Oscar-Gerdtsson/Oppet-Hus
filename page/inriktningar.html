@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        @font-face {
+            font-family: "BigShouldersTextBlack";
+            src: url(../Typsnitt/BigShouldersText-Black.ttf);
+        }
+        *{
+            font-family: "BigShouldersTextBlack";
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            max-height: 100vh;
+            max-width: 100vw;
+        }
+        header{
+            display: flex;
+            background-color: black;
+            color:white;
+            height: calc(100vh/7);
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+        a.inriktning{
+            display: flex;
+            font-size: 30px;
+            height: calc(100vh/7);
+            width: 100%;
+            box-sizing: border-box;
+            align-items: center;
+            padding: 15px;
+            text-decoration: none;
+        }
+        
+        #GD{
+            color: #330026;
+            background-color: #ff0079;
+        }
+        #SG{
+            color: #3b1404;
+            background-color: #ff8800;
+        }
+        #FF{
+            color: #2a250f;
+            background-color: #ffeb3b;
+        }
+        #MU{
+            color: #002d22;
+            background-color: #00e676;
+        }
+        #SU{
+            color: #002736;
+            background-color: #00ffff;
+        }
+        #AW{
+            color: #111111;
+            background-color: white;
+        }
+    </style>
+    <title>Öppet hus på LBS Lund</title>
+    <link rel="icon" type="image/x-icon"href="LBS_Logotyp_Symbol_RGB_Vit.png">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>INRIKTNINGAR</h1>
+    </header>
+    <main>
+        <a class="inriktning" id="GD" href="grafiskdesign.html">GRAFISK DESIGN</a>
+        <a class="inriktning" id="SG" href="spelgrafik.html">SPELGRAFIK</a>
+        <a class="inriktning" id="FF" href="fotofilm.html">FOTO & FILM</a>
+        <a class="inriktning" id="MU" href="musikproduktion.html">MUSIKPRODUKTION</a>
+        <a class="inriktning" id="SU" href="spelutveckling.html">SPELUTVECKLING</a>
+        <a class="inriktning" id="AW" href="aiwebbutveckling.html">AI & WEBBUTVECKLING</a>
+    </main>
+</body>

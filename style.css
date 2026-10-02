@@ -71,7 +71,7 @@ header{
     padding:20px;
     background-color: black;
     color: white;
-    font-family: "Big Shoulders";
+
 }
 header h1{
     align-self: center;
@@ -121,7 +121,7 @@ section p.ingress{
     flex-wrap:wrap;
     justify-content: space-around;
 }
-.inriktning{
+.inriktningdiv{
     margin:20px auto;
     height: 160px;
     width: 300px;

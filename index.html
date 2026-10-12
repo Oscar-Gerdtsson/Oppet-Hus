@@ -3,25 +3,149 @@
 <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        :root{
+            --cyan:#00ffff;
+            --darkcyan:#002736;
+            --green:#00e676;
+            --darkgreen:#002d22;
+            --yellow:#ffeb3b;
+            --darkyellow:#2a250f;
+            --orange:#ff8800;
+            --darkorange:#3b1404;
+            --magenta:#ff0079;
+            --darkmagenta:#330026;
+            --darkgrey:#111111;
+        }
+        body{
+            overflow: hidden;
+        }
+        #cyantest{
+            opacity: 0;
+            position: absolute;
+            animation-name: disappear;
+            animation-duration: 3s;
+            width: 100%; 
+            height: 100vh; 
+            background-color: var(--darkcyan);
+        }
+        @keyframes disappear{
+            0%{z-index:4;opacity: 1;}
+            70%{opacity: 1;}
+            100%{z-index:4;opacity:0;}
+        }
+        #magentatest{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: #330026;
+            z-index: 3;
+        }
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 15% 0;
+            font-size: 25px;
+            color: var(--magenta);
+            align-items: center;
+        }
+        .button-container>h2{
+            flex-grow: 2;
+            width: auto;
+            text-align: center;
+            color: var(--magenta)
+        }
+        .button2{
+            width: 80px;
+            height: 80px;
+            background-color: var(--magenta);
+            color: var(--darkmagenta);
+            display: flex;
+            justify-content: center;
+        }
+        svg{
+            width: 80%;
+            fill:var(--darkmagenta)
+        }
+
+        #pixelblock-container{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            height: calc(1300vw/15);
+            position: absolute;
+            bottom: 0;
+        }
+        .darkpixelblock{
+            background-color: #002736;
+            width: calc(100vw/15);
+            height: calc(100vw/15);
+            z-index: 5;
+        }
+    </style>
     <title>Öppet hus på LBS Lund</title>
     <link rel="icon" type="image/x-icon"href="LBS_Logotyp_Symbol_RGB_Vit.png">
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <a href=""><img src="LBS_Logotyp_RGB_Vit.png" alt=""></a>
-        <h1>ÖPPET HUS</h1>
-    </header>
     <main>
-        <section class="intro">
+        <section id="magentatest">
+
+            <div class="blocks" style="padding-top: 50px; padding-bottom: 40px;">
+                <div style="background-color: #ff0079; color: #330026; border-color: #ff0079;">TA DIG</div>
+                <div style="background-color:  #330026; color:#ff0079; border-color: #ff0079; margin-left: 40px;">VIDARE</div>
+            </div>
+
+            <a href="page/inriktningar.html"><div class="button-container">
+                <div class="button2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128C256 92.7 284.7 64 320 64zM416 376C416 401 403.3 423 384 435.9L384 528C384 554.5 362.5 576 336 576L304 576C277.5 576 256 554.5 256 528L256 435.9C236.7 423 224 401 224 376L224 336C224 283 267 240 320 240C373 240 416 283 416 336L416 376zM160 96C190.9 96 216 121.1 216 152C216 182.9 190.9 208 160 208C129.1 208 104 182.9 104 152C104 121.1 129.1 96 160 96zM176 336L176 368C176 400.5 188.1 430.1 208 452.7L208 528C208 529.2 208 530.5 208.1 531.7C199.6 539.3 188.4 544 176 544L144 544C117.5 544 96 522.5 96 496L96 439.4C76.9 428.4 64 407.7 64 384L64 352C64 299 107 256 160 256C172.7 256 184.8 258.5 195.9 262.9C183.3 284.3 176 309.3 176 336zM432 528L432 452.7C451.9 430.2 464 400.5 464 368L464 336C464 309.3 456.7 284.4 444.1 262.9C455.2 258.4 467.3 256 480 256C533 256 576 299 576 352L576 384C576 407.7 563.1 428.4 544 439.4L544 496C544 522.5 522.5 544 496 544L464 544C451.7 544 440.4 539.4 431.9 531.7C431.9 530.5 432 529.2 432 528zM480 96C510.9 96 536 121.1 536 152C536 182.9 510.9 208 480 208C449.1 208 424 182.9 424 152C424 121.1 449.1 96 480 96z"/></svg></div>
+                <h2>LINJER</h2>
+            </div></a>
+            <div class="button-container">
+                <h2>KARTA</h2>
+                <div class="button2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M128 252.6C128 148.4 214 64 320 64C426 64 512 148.4 512 252.6C512 371.9 391.8 514.9 341.6 569.4C329.8 582.2 310.1 582.2 298.3 569.4C248.1 514.9 127.9 371.9 127.9 252.6zM320 320C355.3 320 384 291.3 384 256C384 220.7 355.3 192 320 192C284.7 192 256 220.7 256 256C256 291.3 284.7 320 320 320z"/></svg></div>
+            </div>
+            <a href="https://lbs.se/lund/elev-for-en-dag/"><div class="button-container">
+                <div class="button2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M80 259.8L289.2 345.9C299 349.9 309.4 352 320 352C330.6 352 341 349.9 350.8 345.9L593.2 246.1C602.2 242.4 608 233.7 608 224C608 214.3 602.2 205.6 593.2 201.9L350.8 102.1C341 98.1 330.6 96 320 96C309.4 96 299 98.1 289.2 102.1L46.8 201.9C37.8 205.6 32 214.3 32 224L32 520C32 533.3 42.7 544 56 544C69.3 544 80 533.3 80 520L80 259.8zM128 331.5L128 448C128 501 214 544 320 544C426 544 512 501 512 448L512 331.4L369.1 390.3C353.5 396.7 336.9 400 320 400C303.1 400 286.5 396.7 270.9 390.3L128 331.4z"/></svg></div>
+                <h2>ELEV FÖR<br>EN DAG</h2>
+            </div></a>           
+        </section>
+        <section id="cyantest">
+            <div class="blocks" style="padding-top: 70px;">
+                <div style="background-color: var(--cyan); color: var(--darkcyan); border-color: var(--cyan);">VÄLKOMMEN</div>
+                <div style="background-color:  var(--darkcyan); color:var(--cyan); border-color: var(--cyan); margin-left: 40px;">TILL ÖPPET HUS!</div>
+            </div>
+            <div id="pixelblock-container"><!--dålig lösning, kommer göra om det-->
+                <img src="tempimg.png" alt="" style="position: absolute;" width="100%" height="100%">
+                <div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="pixelblock"></div><div class="darkpixelblock"></div>
+                <div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div><div class="darkpixelblock"></div>
+            </div>
+        </section>
+        
+        <header style="display: none;">
+            <a href=""><img src="LBS_Logotyp_RGB_Vit.png" alt=""></a>
+            <h1>ÖPPET HUS</h1>
+        </header>
+        <section class="intro" style="display: none;">
             <h1>VÄLKOMMEN</h1>
             <p class="ingress">ingress eller någonting kanske placeholder text</p>
             <div class="buttons">                      
-                <div class="button">Inriktningar<a href="page/inriktningar.html"><div></div></a></div><!--knapparna här borde nog ha en ikon eller en bild-->
+                <div class="button">Inriktningar<a href="page/inriktningar.html"><div></div></a></div>
                 <div class="button">Karta<a href="page/karta.html"><div></div></a></div>
                 <div class="button">Elev för en dag<a href="https://lbs.se/lund/elev-for-en-dag/"><div></div></a></div>
             </div>
+
         </section>
         <section id="inriktningar" style="display: none;">
             <h1>VÅRA PROGRAM</h1>
@@ -81,6 +205,3 @@
     </main>
 
 </body>
-<footer>
-
-</footer>

@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "OnestRegular";
     src: url(Typsnitt/Onest-Regular.ttf);
@@ -62,6 +63,11 @@ p.ingress{
 img{height: 100%;}
 a{text-decoration: none;}
 
+.pixelblock{
+    width: calc(100vw/15);
+    height: calc(100vw/15);
+    
+}
 /*  Header  */
 
 header{
@@ -83,9 +89,6 @@ header a{
 }
 
 /*  Sections  */
-section{
-    margin: 50px 0;
-}
 
 section h1{
     color: #111111;
@@ -114,6 +117,22 @@ section p.ingress{
     background-color: #111111;
 }
 
+
+.blocks{
+    height: fit-content;
+    width: fit-content;
+    font-family: "BigShouldersTextBlack";
+    margin: auto;
+}
+.blocks > div{
+    font-size: 40px;
+    border: solid 2px;
+    height: fit-content;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
 /*  Inriktningar Section  */
 
 .inriktningar{
@@ -136,12 +155,6 @@ section p.ingress{
 
 /*  Elev för en dag Section  */
 
-.elevförendagtest{
-    margin: 50px;
-    padding: 30px;
-    background-color: black;
-    color: white;
-}
 
 /*  Kod för specifika inriktningar  */
 
@@ -204,10 +217,6 @@ section p.ingress{
 
 
 
-footer{
-    background-color: black;
-    height: 100px;
-}
 
 @media (max-width:600px) {
 

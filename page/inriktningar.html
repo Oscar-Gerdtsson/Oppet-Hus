@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="../style.css">
     <style>
         @font-face {
@@ -16,29 +15,39 @@
         body{
             max-height: 100vh;
             max-width: 100vw;
+            background-color: black;
         }
         header{
             display: flex;
-            background-color: black;
-            color:white;
-            height: calc(100vh/7);
-            width: 100%;
             box-sizing: border-box;
-            padding: 15px;
             justify-content: center;
             align-items: center;
-        }
-        a.inriktning{
-            display: flex;
-            font-size: 30px;
             height: calc(100vh/7);
             width: 100%;
+            padding: 15px;
+            background-color: black;
+            color:white;
+        }
+        a.inriktning{
+            float: left;
+            display: flex;
             box-sizing: border-box;
             align-items: center;
+            height: calc((100vh/7));
+            width: 100%;
             padding: 15px;
+            border-top: 2px solid;
+            font-size: 30px;
             text-decoration: none;
+            animation-name: appear;
+            animation-duration: 0.4s;
+            animation-fill-mode:backwards;
         }
-        
+        @keyframes appear{
+            0%{transform: translateX(-50vw) scaleX(0) ;}
+            10%{}
+            100%{transform: translateX(0) scaleX(1);}
+        }
         #GD{
             color: #330026;
             background-color: #ff0079;
@@ -46,26 +55,31 @@
         #SG{
             color: #3b1404;
             background-color: #ff8800;
+            animation-delay: 0.25s;
         }
         #FF{
             color: #2a250f;
             background-color: #ffeb3b;
+            animation-delay: 0.5s;
         }
         #MU{
             color: #002d22;
             background-color: #00e676;
+            animation-delay: 0.75s;
         }
         #SU{
             color: #002736;
             background-color: #00ffff;
+            animation-delay: 1s;
         }
         #AW{
             color: #111111;
             background-color: white;
+            animation-delay: 1.25s;
         }
     </style>
     <title>Öppet hus på LBS Lund</title>
-    <link rel="icon" type="image/x-icon"href="LBS_Logotyp_Symbol_RGB_Vit.png">
+    <link rel="icon" type="image/x-icon"href="../LBS_Logotyp_Symbol_RGB_Vit.png">
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
